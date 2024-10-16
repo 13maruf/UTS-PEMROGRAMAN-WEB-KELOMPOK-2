@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Toko Kami</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #006241; /* Warna latar belakang */
+            color: white; /* Warna teks default menjadi putih */
+        }
+        h1, h2 {
+            margin-top: 30px;
+            text-align: center;
+            color: white; /* Pastikan warna judul juga putih */
+        }
+        .team-member {
+            text-align: center;
+            margin: 20px;
+            transition: transform 0.3s ease; /* Animasi saat hover */
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            transition: transform 0.3s ease; /* Transisi halus */
+        }
+        .team-member:hover img {
+            transform: scale(1.1); /* Zoom in saat di-hover */
+        }
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .dark-mode .navbar {
+            background-color: #333333 !important;
+        }
+        /* Tombol Scroll ke Atas */
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #17a2b8;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50px;
+        }
+        #scrollToTopBtn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body onload="welcomeMessage()">
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#" style="color: #006241;">Starbucks</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="tentang-kami.html">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produk-makanan&minuman.html">Produk Makanan & Minuman</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produk-Bundles.html">Produk Bundles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kontak-kami.html">Kontak Kami</a>
+                        </li>
+                    </ul>
+                    <!-- Tombol Mode Gelap/Terang dengan Ikon -->
+                    <button class="btn btn-outline-secondary ms-3" id="darkModeToggle" onclick="toggleDarkMode()">
+                        <i class="bi bi-moon" id="darkModeIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h1>Tentang Kami</h1>
+        <p class="lead text-center">
+            Website ini adalah tugas mata kuliah Pemrograman Web. Website ini bertema kopi dengan studi kasus 
+            toko kopi yang menjual berbagai macam makanan dan minuman dari aneka kopi dan non-kopi. 
+            Dalam website ini ditampilkan produk makanan, minuman, dan harganya.
+        </p>
+
+        <h2>Anggota Kelompok 2</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="images/BOS.jpg" alt="Pemilik 1">
+                <h3><a href="https://13maruf.github.io/website-Personal/" style="color: white;">Muhammad Ma'ruf</a></h3>
+                <p style="color: white;">230209502100</p>
+            </div>
+            <div class="team-member">
+                <img src="images/BOMBA.jpg" alt="Pemilik 2">
+                <h3><a href="https://aquilta.github.io/website-Personal/" style="color: white;">Aquilita Damayanti</a></h3>
+                <p style="color: white;">230209502111</p>
+            </div>
+            <div class="team-member">
+                <img src="images/EUNIKE.jpg" alt="Pemilik 3">
+                <h3><a href="https://eunikepatrisya.github.io/website-personalll/" target="_blank" style="color: white;">Eunike Patricia</a></h3>
+                <p style="color: white;">230209502090</p>
+            </div>
+            <div class="team-member">
+                <img src="images/YOHANA.jpg" alt="Pemilik 4">
+                <h3><a href="https://yohanarara.github.io/website-personall/" target="_blank" style="color: white;">Yohana Rara</a></h3>
+                <p style="color: white;">23209502102</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tombol Scroll ke Atas -->
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Kembali ke atas"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript Section -->
+    <script>
+        // Mode Gelap/Terang dengan Ikon
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            const icon = document.getElementById("darkModeIcon");
+
+            if (document.body.classList.contains("dark-mode")) {
+                icon.classList.remove("bi-moon");
+                icon.classList.add("bi-brightness-high");
+            } else {
+                icon.classList.remove("bi-brightness-high");
+                icon.classList.add("bi-moon");
+            }
+        }
+
+        // Tombol Scroll ke Atas
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0; // Safari
+            document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
+        }
+    </script>
+</body>
+</html>

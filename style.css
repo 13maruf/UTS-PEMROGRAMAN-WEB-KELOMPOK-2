@@ -1,0 +1,145 @@
+/* Warna hijau ala Starbucks untuk background */
+body {
+    background-color: #006241; /* Hijau Starbucks */
+    color: white; /* Agar teks tampak jelas di atas hijau */
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 30px;
+}
+
+/* Kartu produk dan kontainer */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product, .card {
+    background-color: white; /* Latar belakang putih untuk produk */
+    border-radius: 10px; /* Sudut halus */
+    color: black; /* Warna teks */
+    width: 18rem; /* Lebar kartu produk */
+    margin: 0 auto; /* Pusatkan kartu produk */
+}
+
+.card-body {
+    background-color: #f8f9fa; /* Background konten kartu berwarna netral */
+    color: #000; /* Teks kartu berwarna hitam */
+    text-align: center; /* Memusatkan teks di dalam kartu */
+}
+
+/* Gambar dalam kartu */
+.card-img-top {
+    width: 100%; /* Memastikan gambar mengisi kartu */
+    height: auto; /* Agar proporsional */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Tombol beli */
+.btn-beli {
+    background-color: #00704A; /* Hijau Starbucks */
+    color: white;
+    width: 100%; /* Memastikan tombol mengisi lebar kartu */
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-beli:hover {
+    background-color: #00592f; /* Warna hover untuk tombol beli */
+}
+
+/* Harga */
+.price {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #181a1b;
+    color: white;
+}
+
+/* Mode Gelap */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .navbar, .dark-mode .card-body {
+    background-color: #333333 !important;
+    color: white;
+}
+
+.dark-mode .product {
+    background-color: #2a2a2a; /* Warna latar gelap untuk mode gelap */
+    color: white;
+}
+
+/* Deskripsi Kopi Kami */
+.kopi-kami-section {
+    margin-top: 20px; /* Mengatur jarak antara bagian ini dan elemen di atasnya */
+}
+
+/* Anggota Tim */
+.team-member {
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.3s ease; /* Animasi saat hover */
+    width: 150px; /* Lebar tetap */
+    display: inline-block;
+    vertical-align: top; /* Menjaga posisi anggota tim sejajar */
+}
+
+/* Gambar anggota tim */
+.team-member img {
+    border-radius: 50%; /* Membuat gambar lingkaran */
+    width: 100px; /* Ukuran gambar */
+    height: 100px; /* Ukuran gambar */
+    object-fit: cover; /* Menjaga proporsi gambar */
+    transition: transform 0.3s ease; /* Transisi halus saat hover */
+}
+
+.team-member:hover img {
+    transform: scale(1.1); /* Zoom in saat hover */
+}
+
+/* Kontainer tim */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Jarak antar anggota */
+}
+
+/* Tombol Scroll ke Atas */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #17a2b8;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #0056b3;
+}
